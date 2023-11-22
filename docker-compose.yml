@@ -34,13 +34,3 @@ services:
       - "x11:/tmp/.X11-unix"
     environment:
       - CURSOR=false
-
-  files:
-    build: ./files_multiarch
-    restart: always
-    volumes:
-      - "files:/files"
-    environment:
-      - BROWSE_FOLDER=/files
-    ports:
-      - 80
